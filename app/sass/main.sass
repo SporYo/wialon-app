@@ -1,0 +1,284 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+// Пользовательские стили
+
+body
+    font-family: 'GraphikLCG-Regular'
+    position: relative
+
+a
+    text-decoration: none
+
+.header
+    width: 100%
+    position: fixed
+    background: #fff
+    z-index: 1
+    &_content
+        height: 64px
+        display: flex
+        align-items: center
+        padding: 0 10px
+    &_nav
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &_links
+        margin-left: 20px
+    &_link
+        color: rgba(0, 0, 0, 0.64) 
+        margin: 0 10px
+        border-bottom: 3px solid #fff
+        padding-bottom: 21px
+        font-family: 'GraphikLCG-Medium'
+        &:hover
+            color: $textBlack
+            border-bottom: 3px solid #0a84ff
+            transition: .7s
+    &_button
+        &:last-child
+            margin-left: 5px
+
+.block-1
+    background: url('../img/block-1/bg.png') center top no-repeat
+    background-size: contain
+    padding: 64px 0 60px 0
+    h1
+        width: 70%
+        font-family: 'GraphikLCG-Semibold'
+        font-size: 54px
+        line-height: 60px
+        margin-top: 350px
+    p
+        width: 70%
+        margin-top: 40px
+        font-weight: 400
+        font-size: 24px
+        line-height: 36px
+        color: rgba(0, 0, 0, 0.64)
+        margin-bottom: 40px
+
+.block-2
+    padding: 60px 0
+    &_content
+        h2
+            font-family: 'GraphikLCG-Semibold'
+            font-size: 42px
+            line-height: 52px
+            color: $textBlack
+    &_tabs
+        min-width: 100%
+        display: flex
+        overflow-x: auto
+        margin-top: 40px
+        &::-webkit-scrollbar
+            display: none
+    &_tab
+        display: flex
+        align-items: center
+        justify-content: center
+        min-width: 200px
+        margin: 5px
+        height: 66px
+        border: 1px solid lightgrey
+        color: rgba(0, 0, 0, 0.64)
+        font-family: 'GraphikLCG-Medium'
+        font-size: 14px
+        border-radius: 8px
+        padding: 0 12px
+        cursor: pointer
+    &_img
+        display: none
+        &--active
+            display: block
+    img
+        width: 100%
+        margin-top: 40px
+
+
+.block-3
+    padding: 60px 0 120px 0
+    &_items
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &_item
+        width: 255px
+        border-top: 1px solid #DBDBDB
+        padding-top: 20px
+        span
+            font-family: 'GraphikLCG-Semibold'
+            font-size: 52px
+            line-height: 56px
+            color: $textBlack
+            margin: 12px 0
+        p
+            font-family: 'GraphikLCG-Regular'
+            font-size: 18px
+            line-height: 28px
+            color: rgba(0, 0, 0, 0.64)
+
+.block-4
+    background: #F7F7F5
+    .container
+        background: url('../img/block-4/bg.png') no-repeat right 
+        background-size: contain
+    &_description
+        width: 53%
+        padding: 120px 0
+        h2
+            font-family: 'GraphikLCG-Semibold'
+            font-size: 42px
+            line-height: 52px
+            color: $textBlack
+        p
+            font-size: 24px
+            line-height: 36px
+            color: rgba(0, 0, 0, 0.64)
+            margin-top: 24px
+
+.block-5
+    padding: 120px 0 60px 0
+    &_items
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &_item
+        width: 360px
+        margin-top: 60px
+        h4
+            margin-top: 36px
+            font-size: 24px
+            line-height: 32px
+            color: $textBlack
+            font-family: 'GraphikLCG-Semibold'
+        p
+            margin-top: 8px
+            font-size: 18px
+            line-height: 28px
+            color: rgba(0, 0, 0, 0.64)
+
+.block-6
+    padding: 60px 0 0 0
+    &_content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        h2
+            font-family: 'GraphikLCG-Semibold'
+            font-size: 42px
+            line-height: 52px
+            color: $textBlack
+            text-align: center
+            margin-bottom: 70px
+        form
+            margin-bottom: -100px
+            z-index: 2
+        select
+            width: 400px
+            height: 52px
+            filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2))
+            border: 1px solid #DBDBDB
+            border-radius: 8px
+            &:first-child
+                margin-right: 5px
+        button
+            width: 145px
+            height: 52px
+            border: none
+            outline: none
+            border-radius: 8px
+            margin-left: 5px
+        option
+            font-size: 18px
+            
+.form
+    background: rgba(0, 0, 0, 0.4)
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    &_content
+        background: white
+        width: 300px
+        padding: 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        h3
+            font-size: 28px
+            margin-bottom: 10px
+            text-align: center
+        input
+            width: 100%
+            height: 52px
+            filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2))
+            border: 1px solid #DBDBDB
+            border-radius: 8px
+            margin-bottom: 10px
+            font-size: 20px
+            text-align: center
+        .close
+            cursor: pointer
+            font-size: 22px
+            margin-left: 250px
+        button
+            width: 100%
+            height: 52px
+            border: none
+            font-size: 20px
+            border-radius: 8px
+            margin-top: 20px
+
+
+
+
+
+
+
+
+.container
+    width: 1200px
+    margin: 0 auto
+
+.btn
+    font-family: 'GraphikLCG-Medium'
+    padding: 10px 18px
+    border: 1px solid $blue
+    border-radius: 5px
+    color: $blue
+    &-full
+        background: $blue
+        color: #fff
+    &-grey
+        border: 1px solid #DBDBDB
+        color: rgba(0, 0, 0, 0.64)
+        font-size: 16px
+    &-active
+        background: $blue
+        color: #fff
+#map
+    width: 100%
+    height: 600px
+
+.hidden
+    display: none
+
+.carousel__button,
+.fancybox__counter,
+.carousel__viewport
+    display: none
+.carousel__button.fancybox__button--close
+    display: block
+
+@import "media" // Всегда в конце
